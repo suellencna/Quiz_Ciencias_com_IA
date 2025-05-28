@@ -32,7 +32,7 @@ Um quiz de ciências divertido e interativo, desenvolvido em Python com Tkinter,
 * **Python 3.13:** Linguagem de programação principal.
 * **Tkinter:** Biblioteca padrão do Python para desenvolvimento de interfaces gráficas.
 * **Google Gemini API:** Utilizada para as funcionalidades de Inteligência Artificial.
-* **PyInstaller:** Ferramenta para empacotar o aplicativo em um executável (futuro).
+* **PyInstaller:** Ferramenta para empacotar o aplicativo em um executável.
 
 ---
 
@@ -40,11 +40,14 @@ Um quiz de ciências divertido e interativo, desenvolvido em Python com Tkinter,
 
 ### Opção 1: Baixe o Aplicativo Executável (Recomendado para usuários)
 
-*(**Nota:** Esta seção será atualizada quando o executável estiver disponível na área de Releases do GitHub.)*
+A versão compilada do quiz para Windows (formato `.exe`) já está disponível! Você pode executar o programa diretamente, sem precisar instalar Python ou suas dependências.
 
-Em breve, você poderá baixar a versão compilada do quiz para Windows (formato `.exe`). Isso permitirá que você execute o programa diretamente, sem precisar instalar Python ou suas dependências.
+**Para baixar a última versão, visite nossa página de [Releases aqui!](https://github.com/suellencna/Quiz_Ciencias_com_IA/releases/tag/v1.0.0)**
 
-**Fique atento aos nossos [Releases](https://github.com/suellencna/Quiz_com_I.A/releases) para a versão mais recente!**
+**Instruções:**
+1.  Acesse a página de Releases clicando no link acima.
+2.  Na seção do lançamento (`v1.0.0` ou a mais recente), localize e baixe o arquivo `Jogo.exe` na área de "Assets".
+3.  Execute o `Jogo.exe` no seu computador Windows.
 
 ### Opção 2: Execute do Código-Fonte (Para Desenvolvedores)
 
@@ -52,11 +55,11 @@ Se você é um desenvolvedor Python e deseja explorar o código ou fazer modific
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/suellencna/Quiz_com_I.A.git](https://github.com/suellencna/Quiz_com_I.A.git)
+    git clone [https://github.com/suellencna/Quiz_Ciencias_com_IA.git](https://github.com/suellencna/Quiz_Ciencias_com_IA.git)
     ```
 2.  **Navegue até a pasta do projeto:**
     ```bash
-    cd Quiz_com_I.A
+    cd Quiz_Ciencias_com_IA
     ```
 3.  **Crie e ative um ambiente virtual (altamente recomendado):**
     ```bash
@@ -96,4 +99,4 @@ Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](L
 Desenvolvido por Suellen Andrade Pinto.
 
 * [Seu Perfil no GitHub](https://github.com/suellencna)
-* [Seu LinkedIn (Opcional)](https://www.linkedin.com/in/suellen-andrade-pinto-b63751a6/) 
+* [Seu LinkedIn (Opcional)](https://www.linkedin.com/in/suellen-andrade-pinto-b63751a6/)
