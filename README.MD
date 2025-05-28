@@ -16,13 +16,13 @@ Um quiz de ciências divertido e interativo, desenvolvido em Python com Tkinter,
 
 ## 📸 Capturas de Tela
 
-![Tela Inicial do Quiz](docs/Tela_Inicial.JPG)
+![Tela Inicial do Quiz](docs/Tela_Inicial.jpg)
 *(A tela principal do jogo, mostrando o menu ou a primeira pergunta.)*
 
-![Tela de Pergunta](docs/Tela_Pergunta.JPG)
+![Tela de Pergunta](docs/Tela_Pergunta.jpg)
 *(Um exemplo de como as perguntas e opções são apresentadas.)*
 
-![Tela de Feedback da Resposta](docs/Tela_Feedback.JPG)
+![Tela de Feedback da Resposta](docs/Tela_Feedback.jpg)
 *(Mostrando o feedback da IA após uma resposta.)*
 
 ---
