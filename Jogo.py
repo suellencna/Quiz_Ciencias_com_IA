@@ -12,6 +12,18 @@ import sys
 # Certifique-se de que está instalada: pip install Pillow
 from PIL import Image, ImageTk
 
+# --- A FUNÇÃO resource_path DEVE VIR AQUI, LOGO APÓS OS IMPORTS ---
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+# --- FIM DA FUNÇÃO resource_path ---
+
 
 # --- Configuração de Estilos e Aparência da GUI ---
 def configurar_estilos():
@@ -294,7 +306,7 @@ def mostrar_tela_inicial():
         widget.destroy()
 
     # Configura a imagem de fundo
-    configurar_imagem_fundo(janela, "background.jpeg")  # Nome do arquivo da sua imagem de fundo
+    configurar_imagem_fundo(janela, resource_path("background.jpeg"))  # Nome do arquivo da sua imagem de fundo
 
     # Todos os widgets a seguir serão empacotados dentro do canvas_background
     # para que fiquem sobre a imagem de fundo.
@@ -305,11 +317,17 @@ def mostrar_tela_inicial():
 
     # Carrega e exibe a imagem do robô
     try:
-        imagem_robo_pil = Image.open("robot.png")  # Caminho para a imagem do robô
-        imagem_robo_pil = imagem_robo_pil.resize((150, 150), Image.LANCZOS)  # Redimensiona a imagem
+        robo_image_path = resource_path("robot.png")
+
+        # MUITO IMPORTANTE: Abra a imagem AQUI e atribua a imagem carregada a imagem_robo_pil
+        imagem_robo_pil = Image.open(robo_image_path)  # <--- Esta linha é a que faltava!
+
+        # E atualize para o método mais recente de resampling
+        imagem_robo_pil = imagem_robo_pil.resize((150, 150), Image.Resampling.LANCZOS)  # Redimensiona a imagem
+
         imagem_robo = ImageTk.PhotoImage(imagem_robo_pil)
         label_robo = ttk.Label(canvas_background, image=imagem_robo)
-        label_robo.image = imagem_robo  # Mantém a referência
+        label_robo.image = imagem_robo  # Mantém a referência para evitar garbage collection
         canvas_background.create_window(500, 200, window=label_robo, anchor="center")
     except FileNotFoundError:
         label_robo_placeholder = ttk.Label(canvas_background,
@@ -363,7 +381,7 @@ def mostrar_tela_pergunta():
         widget.destroy()
 
     # Configura a imagem de fundo novamente para a nova tela
-    configurar_imagem_fundo(janela, "background2.jpg")
+    configurar_imagem_fundo(janela, resource_path("background2.jpg"))
 
     gerar_pergunta()
 
